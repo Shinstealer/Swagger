@@ -23,7 +23,7 @@ public class SwaggerApplication {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()// ApiSelector : Swaggerで書き起こすAPIを選択する。
-				.paths(PathSelectors.ant("/alp-apis/**")).build()// 指定したパスに一致するものだけをSwaggerに起こしてくれる
+				.paths(PathSelectors.ant("/alpc/**")).build()// 指定したパスに一致するものだけをSwaggerに起こしてくれる
 				.useDefaultResponseMessages(false)// 定義していないステータスコードを自動で付与してくれる。今回は自動付与をOFFに
 				.host("jp.co.pew.swaggerSample")
 				.apiInfo(apiInfo());// APIのインフォメーションを設定
